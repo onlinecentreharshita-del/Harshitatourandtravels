@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>हर्षिता टूर एंड ट्रेवल्स</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  margin:0;
+  background:#f3f6fb;
+  color:#172033;
+}
+
+.header{
+  background:linear-gradient(135deg,#0757d9,#722cff);
+  color:white;
+  text-align:center;
+  padding:28px 15px;
+}
+
+.header h1{
+  margin:0;
+  font-size:29px;
+}
+
+.header p{
+  margin:8px 0 0;
+  font-size:15px;
+}
+
+.container{
+  max-width:650px;
+  margin:auto;
+  padding:15px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  margin:15px 0;
+  border-radius:18px;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.card h2{
+  margin-top:0;
+}
+
+input,select,textarea{
+  width:100%;
+  padding:13px;
+  margin:6px 0 12px;
+  border:1px solid #d5dbe7;
+  border-radius:10px;
+  font-size:15px;
+}
+
+button,.btn{
+  width:100%;
+  padding:14px;
+  border:0;
+  border-radius:11px;
+  font-size:16px;
+  font-weight:bold;
+  margin-top:8px;
+  cursor:pointer;
+  text-decoration:none;
+  display:block;
+  text-align:center;
+}
+
+.blue{
+  background:#0757d9;
+  color:white;
+}
+
+.green{
+  background:#19b957;
+  color:white;
+}
+
+.orange{
+  background:#ff9900;
+  color:white;
+}
+
+.wheel{
+  width:250px;
+  height:250px;
+  margin:20px auto;
+  border-radius:50%;
+  border:8px solid white;
+  box-shadow:0 5px 20px #999;
+  background:conic-gradient(
+    #ffcc33 0deg 72deg,
+    #ff6666 72deg 144deg,
+    #55c7ff 144deg 216deg,
+    #9a72ff 216deg 288deg,
+    #55d98a 288deg 360deg
+  );
+  transition:transform 4s cubic-bezier(.12,.8,.18,1);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:45px;
+}
+
+.pointer{
+  text-align:center;
+  font-size:30px;
+  margin-bottom:-15px;
+  position:relative;
+  z-index:2;
+}
+
+.result{
+  text-align:center;
+  font-size:19px;
+  font-weight:bold;
+  min-height:28px;
+}
+
+label{
+  font-weight:bold;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  color:#687386;
+}
+
+.small{
+  font-size:13px;
+  color:#687386;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🚗 हर्षिता टूर एंड ट्रेवल्स</h1>
+  <p>आरामदायक कार • आसान बुकिंग • शानदार ऑफर</p>
+</div>
+
+<div class="container">
+
+<!-- SPIN WHEEL -->
+
+<div class="card">
+  <h2>🎡 Spin Wheel ऑफर</h2>
+
+  <div class="pointer">▼</div>
+
+  <div id="wheel" class="wheel">🎁</div>
+
+  <button class="blue" onclick="spinWheel()">
+    🎡 SPIN करें
+  </button>
+
+  <div id="result" class="result"></div>
+
+  <p class="small">
+    भाग्यशाली ऑफर बुकिंग के समय इस्तेमाल करें।
+  </p>
+</div>
+
+
+<!-- BOOKING -->
+
+<div class="card">
+
+<h2>🚕 कार बुकिंग</h2>
+
+<form onsubmit="sendBooking(event)">
+
+<label>नाम</label>
+<input id="name" required placeholder="अपना नाम">
+
+<label>मोबाइल नंबर</label>
+<input id="phone" required type="tel"
+placeholder="10 अंकों का मोबाइल नंबर">
+
+<label>यात्रा की तारीख</label>
+<input id="date" required type="date">
+
+<label>यात्रा का समय</label>
+<input id="time" required type="time">
+
+<label>कहाँ से जाना है?</label>
+<input id="from" required placeholder="Pickup स्थान">
+
+<label>कहाँ जाना है?</label>
+<input id="to" required placeholder="Destination">
+
+<label>कितने यात्री?</label>
+<select id="passengers">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6+</option>
+</select>
+
+<label>अतिरिक्त जानकारी</label>
+<textarea id="note"
+placeholder="राउंड ट्रिप, सामान आदि"></textarea>
+
+<button class="green" type="submit">
+📲 WhatsApp पर बुकिंग भेजें
+</button>
+
+</form>
+</div>
+
+
+<!-- PAYMENT -->
+
+<div class="card">
+
+<h2>💳 ऑनलाइन पेमेंट</h2>
+
+<p>
+बुकिंग की पुष्टि के लिए ऑनलाइन भुगतान करें।
+</p>
+
+<a
+class="btn orange"
+href="upi://pay?pa=YOURUPI@upi&pn=Harshita%20Tour%20And%20Travels&cu=INR">
+💳 UPI से Payment करें
+</a>
+
+<p class="small">
+UPI ID सेट होने के बाद Payment बटन सीधे आपके UPI ऐप में खुलेगा।
+</p>
+
+</div>
+
+
+<!-- CONTACT -->
+
+<div class="card">
+
+<h2>📞 संपर्क करें</h2>
+
+<a class="btn green"
+href="https://wa.me/917970041341">
+WhatsApp: 7970041341
+</a>
+
+<a class="btn blue"
+href="tel:+919691043194">
+📞 कॉल: 9691043194
+</a>
+
+<a class="btn blue"
+href="tel:+917970041341">
+📞 कॉल: 7970041341
+</a>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 हर्षिता टूर एंड ट्रेवल्स
+</footer>
+
+
+<script>
+
+const offers = [
+  "₹100 डिस्काउंट 🎉",
+  "फ्री पानी बोतल 💧",
+  "बेस्ट ऑफ लक 🍀",
+  "नेक्स्ट बुकिंग गिफ्ट 🎁",
+  "उपसरपंच चाय ☕"
+];
+
+let spinning = false;
+let rotation = 0;
+
+function spinWheel(){
+
+  if(spinning) return;
+
+  spinning = true;
+
+  let index =
+    Math.floor(Math.random() * offers.length);
+
+  let slice = 360 / offers.length;
+
+  rotation +=
+    1440 +
+    (360 - index * slice - slice / 2);
+
+  document.getElementById("wheel").style.transform =
+    "rotate(" + rotation + "deg)";
+
+  setTimeout(function(){
+
+    document.getElementById("result").innerHTML =
+      "🎉 आपका ऑफर: " + offers[index];
+
+    spinning = false;
+
+  },4100);
+}
+
+
+function sendBooking(event){
+
+  event.preventDefault();
+
+  let name =
+    document.getElementById("name").value;
+
+  let phone =
+    document.getElementById("phone").value;
+
+  let date =
+    document.getElementById("date").value;
+
+  let time =
+    document.getElementById("time").value;
+
+  let from =
+    document.getElementById("from").value;
+
+  let to =
+    document.getElementById("to").value;
+
+  let passengers =
+    document.getElementById("passengers").value;
+
+  let note =
+    document.getElementById("note").value;
+
+  let offer =
+    document.getElementById("result").innerText ||
+    "कोई Spin ऑफर नहीं";
+
+  let message =
+    "🚗 *हर्षिता टूर एंड ट्रेवल्स - नई बुकिंग*%0A%0A" +
+
+    "👤 नाम: " + name + "%0A" +
+    "📱 मोबाइल: " + phone + "%0A" +
+    "📅 तारीख: " + date + "%0A" +
+    "⏰ समय: " + time + "%0A" +
+    "📍 कहाँ से: " + from + "%0A" +
+    "🏁 कहाँ जाना है: " + to + "%0A" +
+    "👥 यात्री: " + passengers + "%0A" +
+    "🎁 ऑफर: " + offer + "%0A" +
+    "📝 जानकारी: " + note;
+
+  window.open(
+    "https://wa.me/917970041341?text=" + message,
+    "_blank"
+  );
+}
+
+</script>
+
+</body>
+  </html>
