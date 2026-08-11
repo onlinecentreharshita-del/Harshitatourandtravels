@@ -2,389 +2,423 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>हर्षिता टूर एंड ट्रेवल्स</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Harshita Tour & Travels</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  font-family:Arial,sans-serif;
-}
-
+*{box-sizing:border-box}
 body{
-  margin:0;
-  background:#f3f6fb;
-  color:#172033;
+ margin:0;
+ background:#f2f5f9;
+ font-family:Arial,sans-serif;
+ color:#172033;
 }
-
 .header{
-  background:linear-gradient(135deg,#0757d9,#722cff);
-  color:white;
-  text-align:center;
-  padding:28px 15px;
+ background:linear-gradient(135deg,#0757d9,#762cff);
+ color:white;
+ text-align:center;
+ padding:25px 12px;
 }
-
-.header h1{
-  margin:0;
-  font-size:29px;
-}
-
-.header p{
-  margin:8px 0 0;
-  font-size:15px;
-}
-
-.container{
-  max-width:650px;
-  margin:auto;
-  padding:15px;
-}
-
+.header h1{margin:0;font-size:26px}
+.container{max-width:650px;margin:auto;padding:15px}
 .card{
-  background:white;
-  padding:20px;
-  margin:15px 0;
-  border-radius:18px;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
+ background:white;
+ border-radius:18px;
+ padding:20px;
+ margin:15px 0;
+ box-shadow:0 5px 20px rgba(0,0,0,.09);
 }
-
-.card h2{
-  margin-top:0;
+.confirm{
+ border:2px solid #0757d9;
 }
-
-input,select,textarea{
-  width:100%;
-  padding:13px;
-  margin:6px 0 12px;
-  border:1px solid #d5dbe7;
-  border-radius:10px;
-  font-size:15px;
+.line{
+ border-top:1px dashed #aaa;
+ margin:15px 0;
 }
-
+.detail{
+ display:flex;
+ gap:8px;
+ margin:10px 0;
+ line-height:1.4;
+}
+.label{font-weight:bold}
+.status{
+ display:inline-block;
+ background:#fff3cd;
+ color:#856404;
+ padding:6px 12px;
+ border-radius:20px;
+ font-weight:bold;
+}
 button,.btn{
-  width:100%;
-  padding:14px;
-  border:0;
-  border-radius:11px;
-  font-size:16px;
-  font-weight:bold;
-  margin-top:8px;
-  cursor:pointer;
-  text-decoration:none;
-  display:block;
-  text-align:center;
+ width:100%;
+ border:0;
+ border-radius:11px;
+ padding:14px;
+ margin-top:10px;
+ font-size:16px;
+ font-weight:bold;
+ cursor:pointer;
+ text-align:center;
+ text-decoration:none;
+ display:block;
 }
-
-.blue{
-  background:#0757d9;
-  color:white;
+.blue{background:#0757d9;color:white}
+.green{background:#18b957;color:white}
+.orange{background:#ff9800;color:white}
+.dark{background:#222;color:white}
+input{
+ width:100%;
+ padding:12px;
+ border:1px solid #ccd3df;
+ border-radius:10px;
+ margin:6px 0 12px;
+ font-size:15px;
 }
-
-.green{
-  background:#19b957;
-  color:white;
-}
-
-.orange{
-  background:#ff9900;
-  color:white;
-}
-
 .wheel{
-  width:250px;
-  height:250px;
-  margin:20px auto;
-  border-radius:50%;
-  border:8px solid white;
-  box-shadow:0 5px 20px #999;
-  background:conic-gradient(
-    #ffcc33 0deg 72deg,
-    #ff6666 72deg 144deg,
-    #55c7ff 144deg 216deg,
-    #9a72ff 216deg 288deg,
-    #55d98a 288deg 360deg
-  );
-  transition:transform 4s cubic-bezier(.12,.8,.18,1);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:45px;
+ width:240px;
+ height:240px;
+ margin:20px auto;
+ border-radius:50%;
+ border:8px solid white;
+ box-shadow:0 5px 20px #999;
+ background:conic-gradient(
+ #ffcc33 0 72deg,
+ #ff6666 72deg 144deg,
+ #55c7ff 144deg 216deg,
+ #9a72ff 216deg 288deg,
+ #55d98a 288deg 360deg
+ );
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-size:45px;
+ transition:transform 4s cubic-bezier(.12,.8,.18,1);
 }
-
-.pointer{
-  text-align:center;
-  font-size:30px;
-  margin-bottom:-15px;
-  position:relative;
-  z-index:2;
-}
-
-.result{
-  text-align:center;
-  font-size:19px;
-  font-weight:bold;
-  min-height:28px;
-}
-
-label{
-  font-weight:bold;
-}
-
-footer{
-  text-align:center;
-  padding:25px;
-  color:#687386;
-}
-
-.small{
-  font-size:13px;
-  color:#687386;
-  text-align:center;
-}
+.pointer{text-align:center;font-size:28px;margin-bottom:-15px}
+.result{text-align:center;font-weight:bold;font-size:18px;min-height:30px}
+.small{text-align:center;color:#697586;font-size:13px}
+.admin-title{color:#0757d9}
 </style>
 </head>
 
 <body>
 
 <div class="header">
-  <h1>🚗 हर्षिता टूर एंड ट्रेवल्स</h1>
-  <p>आरामदायक कार • आसान बुकिंग • शानदार ऑफर</p>
+<h1>🚍 HARSHITA TOUR & TRAVELS 🚍</h1>
+<p>Booking Confirmation & Lucky Spin</p>
 </div>
-<!-- मेरी और कार की फोटो -->
-<div style="text-align:center; padding:20px;">
 
-  <h2>हमारी कार 🚗</h2>
-
-  <img src="IMG_20260116_092716.jpg"
-       alt="Harshita Tour and Travels Car"
-       style="width:100%; max-width:500px; border-radius:18px; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
-
-  <h2 style="margin-top:25px;">हमारे बारे में 👤</h2>
-
-  <img src="file_00000000c384720894ee0a605d7e0e66.png"
-       alt="Harshita Tour and Travels"
-       style="width:100%; max-width:400px; border-radius:18px; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
-
-</div>
 <div class="container">
 
-<!-- SPIN WHEEL -->
+<!-- ADMIN BOOKING FORM -->
+<div class="card" id="adminBox">
 
-<div class="card">
-  <h2>🎡 Spin Wheel ऑफर</h2>
+<h2 class="admin-title">📝 नई Booking बनाएं</h2>
 
-  <div class="pointer">▼</div>
+<label>Booking ID</label>
+<input id="b_id" value="HTT-2026-001">
 
-  <div id="wheel" class="wheel">🎁</div>
+<label>Passenger Name</label>
+<input id="b_name" value="अंतर सिंह व 7 अन्य यात्री">
 
-  <button class="blue" onclick="spinWheel()">
-    🎡 SPIN करें
-  </button>
+<label>Journey Date</label>
+<input id="b_date" type="date" value="2026-08-12">
 
-  <div id="result" class="result"></div>
+<label>Destination</label>
+<input id="b_destination" value="उज्जैन मेलनी माताजी">
 
-  <p class="small">
-    भाग्यशाली ऑफर बुकिंग के समय इस्तेमाल करें।
-  </p>
-</div>
+<label>Pickup Location</label>
+<input id="b_pickup" value="खजुरी चंद्रावत">
 
+<label>Reporting Time</label>
+<input id="b_time" value="सुबह 8 बजे">
 
-<!-- BOOKING -->
+<label>Vehicle</label>
+<input id="b_vehicle" value="Eeco CAR">
 
-<div class="card">
+<label>Driver Name</label>
+<input id="b_driver" value="मंगल सिंह राजपूत">
 
-<h2>🚕 कार बुकिंग</h2>
+<label>Driver Mobile</label>
+<input id="b_mobile" value="7970041341, 9691043194">
 
-<form onsubmit="sendBooking(event)">
+<label>Total Fare</label>
+<input id="b_total" type="number" value="3000">
 
-<label>नाम</label>
-<input id="name" required placeholder="अपना नाम">
+<label>Advance Paid</label>
+<input id="b_advance" type="number" value="0">
 
-<label>मोबाइल नंबर</label>
-<input id="phone" required type="tel"
-placeholder="10 अंकों का मोबाइल नंबर">
+<label>Payment Status</label>
+<input id="b_status" value="PENDING">
 
-<label>यात्रा की तारीख</label>
-<input id="date" required type="date">
-
-<label>यात्रा का समय</label>
-<input id="time" required type="time">
-
-<label>कहाँ से जाना है?</label>
-<input id="from" required placeholder="Pickup स्थान">
-
-<label>कहाँ जाना है?</label>
-<input id="to" required placeholder="Destination">
-
-<label>कितने यात्री?</label>
-<select id="passengers">
-<option>1</option>
-<option>2</option>
-<option>3</option>
-<option>4</option>
-<option>5</option>
-<option>6+</option>
-</select>
-
-<label>अतिरिक्त जानकारी</label>
-<textarea id="note"
-placeholder="राउंड ट्रिप, सामान आदि"></textarea>
-
-<button class="green" type="submit">
-📲 WhatsApp पर बुकिंग भेजें
+<button class="blue" onclick="generateLink()">
+🔗 Booking Link बनाएं
 </button>
 
-</form>
+<div id="generated"></div>
+
 </div>
 
 
-<!-- PAYMENT -->
+<!-- BOOKING CONFIRMATION -->
 
-<div class="card">
+<div class="card confirm">
 
-<h2>💳 ऑनलाइन पेमेंट</h2>
+<h2>🎫 BOOKING CONFIRMATION</h2>
+
+<div class="line"></div>
 
 <p>
-बुकिंग की पुष्टि के लिए ऑनलाइन भुगतान करें।
+नमस्कार <b id="name">अंतर सिंह जी</b> 🙏
 </p>
 
-<a
-class="btn orange"
-href="upi://pay?pa=YOURUPI@upi&pn=Harshita%20Tour%20And%20Travels&cu=INR">
-💳 UPI से Payment करें
-</a>
-
-<p class="small">
-UPI ID सेट होने के बाद Payment बटन सीधे आपके UPI ऐप में खुलेगा।
+<p>
+आपकी यात्रा की Booking <b>CONFIRMED ✅</b> है।
 </p>
+
+<div class="line"></div>
+
+<div class="detail">🆔 <span class="label">Booking ID:</span> <span id="id"></span></div>
+
+<div class="detail">👤 <span class="label">Passenger Name:</span> <span id="passenger"></span></div>
+
+<div class="detail">📅 <span class="label">Journey Date:</span> <span id="date"></span></div>
+
+<div class="detail">📍 <span class="label">Destination:</span> <span id="destination"></span></div>
+
+<div class="detail">📍 <span class="label">Pickup Location:</span> <span id="pickup"></span></div>
+
+<div class="detail">⏰ <span class="label">Reporting Time:</span> <span id="time"></span></div>
+
+<div class="detail">🚍 <span class="label">Vehicle:</span> <span id="vehicle"></span></div>
+
+<div class="detail">👨‍✈️ <span class="label">Driver Name:</span> <span id="driver"></span></div>
+
+<div class="detail">📞 <span class="label">Driver Mobile:</span> <span id="mobile"></span></div>
+
+<div class="detail">💰 <span class="label">Total Fare:</span> ₹<span id="total"></span></div>
+
+<div class="detail">💵 <span class="label">Advance Paid:</span> ₹<span id="advance"></span></div>
+
+<div class="detail">💳 <span class="label">Balance:</span> ₹<span id="balance"></span></div>
+
+<div class="detail">
+🟢 <span class="label">Payment Status:</span>
+<span class="status" id="status"></span>
+</div>
 
 </div>
 
 
-<!-- CONTACT -->
+<!-- LUCKY SPIN -->
 
 <div class="card">
 
-<h2>📞 संपर्क करें</h2>
+<h2>🎡 LUCKY SPIN OFFER 🎁</h2>
 
-<a class="btn green"
-href="https://wa.me/917970041341">
-WhatsApp: 7970041341
-</a>
+<div class="line"></div>
 
-<a class="btn blue"
-href="tel:+919691043194">
-📞 कॉल: 9691043194
-</a>
+<p>
+बधाई हो आपको लक्की स्पिन मिला है। 🎉
+</p>
 
-<a class="btn blue"
-href="tel:+917970041341">
-📞 कॉल: 7970041341
-</a>
+<p>
+कृपया अपना नाम और नंबर डालकर Spin करें।
+</p>
+
+<label>नाम</label>
+<input id="spinName" placeholder="अपना नाम">
+
+<label>मोबाइल नंबर</label>
+<input id="spinPhone" placeholder="मोबाइल नंबर">
+
+<div class="pointer">▼</div>
+
+<div id="wheel" class="wheel">🎁</div>
+
+<button class="orange" onclick="spinWheel()">
+🎡 SPIN करें
+</button>
+
+<div id="result" class="result"></div>
+
+<button id="whatsapp" class="green" onclick="sendResult()" style="display:none">
+📲 WhatsApp पर Result भेजें
+</button>
 
 </div>
 
 </div>
-
-<footer>
-© 2026 हर्षिता टूर एंड ट्रेवल्स
-</footer>
 
 
 <script>
 
-const offers = [
-  "₹100 डिस्काउंट 🎉",
-  "फ्री पानी बोतल 💧",
-  "बेस्ट ऑफ लक 🍀",
-  "नेक्स्ट बुकिंग गिफ्ट 🎁",
-  "उपसरपंच चाय ☕"
+const offers=[
+"₹100 डिस्काउंट 🎉",
+"फ्री पानी बोतल 💧",
+"बेस्ट ऑफ लक 🍀",
+"नेक्स्ट बुकिंग गिफ्ट 🎁",
+"उपसरपंच चाय ☕"
 ];
 
-let spinning = false;
-let rotation = 0;
+let spinning=false;
+let rotation=0;
+let selectedOffer="";
+
+
+function getData(){
+
+const p=new URLSearchParams(location.search);
+
+return {
+id:p.get("id"),
+name:p.get("name"),
+date:p.get("date"),
+destination:p.get("destination"),
+pickup:p.get("pickup"),
+time:p.get("time"),
+vehicle:p.get("vehicle"),
+driver:p.get("driver"),
+mobile:p.get("mobile"),
+total:p.get("total"),
+advance:p.get("advance"),
+status:p.get("status")
+};
+
+}
+
+
+function showBooking(){
+
+const d=getData();
+
+if(!d.id)return;
+
+document.getElementById("adminBox").style.display="none";
+
+document.getElementById("id").innerText=d.id;
+document.getElementById("name").innerText=d.name;
+document.getElementById("passenger").innerText=d.name;
+document.getElementById("date").innerText=d.date;
+document.getElementById("destination").innerText=d.destination;
+document.getElementById("pickup").innerText=d.pickup;
+document.getElementById("time").innerText=d.time;
+document.getElementById("vehicle").innerText=d.vehicle;
+document.getElementById("driver").innerText=d.driver;
+document.getElementById("mobile").innerText=d.mobile;
+document.getElementById("total").innerText=d.total;
+document.getElementById("advance").innerText=d.advance;
+document.getElementById("balance").innerText=
+Number(d.total)-Number(d.advance);
+document.getElementById("status").innerText=d.status;
+
+}
+
+
+function generateLink(){
+
+const fields={
+id:document.getElementById("b_id").value,
+name:document.getElementById("b_name").value,
+date:document.getElementById("b_date").value,
+destination:document.getElementById("b_destination").value,
+pickup:document.getElementById("b_pickup").value,
+time:document.getElementById("b_time").value,
+vehicle:document.getElementById("b_vehicle").value,
+driver:document.getElementById("b_driver").value,
+mobile:document.getElementById("b_mobile").value,
+total:document.getElementById("b_total").value,
+advance:document.getElementById("b_advance").value,
+status:document.getElementById("b_status").value
+};
+
+const params=new URLSearchParams(fields);
+
+const link=location.origin+location.pathname+"?"+params.toString();
+
+document.getElementById("generated").innerHTML=
+'<p style="word-break:break-all;font-size:13px">'+link+'</p>'+
+'<button class="green" onclick="copyLink()">📋 Link Copy करें</button>'+
+'<a class="btn blue" target="_blank" href="'+link+'">👀 Customer Page देखें</a>';
+
+window.generatedLink=link;
+
+}
+
+
+function copyLink(){
+
+navigator.clipboard.writeText(window.generatedLink);
+
+alert("Booking Link Copy हो गया ✅");
+
+}
+
 
 function spinWheel(){
 
-  if(spinning) return;
+if(spinning)return;
 
-  spinning = true;
+if(!document.getElementById("spinName").value ||
+!document.getElementById("spinPhone").value){
 
-  let index =
-    Math.floor(Math.random() * offers.length);
+alert("कृपया अपना नाम और मोबाइल नंबर डालें।");
+return;
 
-  let slice = 360 / offers.length;
+}
 
-  rotation +=
-    1440 +
-    (360 - index * slice - slice / 2);
+spinning=true;
 
-  document.getElementById("wheel").style.transform =
-    "rotate(" + rotation + "deg)";
+let index=Math.floor(Math.random()*offers.length);
+let slice=360/offers.length;
 
-  setTimeout(function(){
+rotation+=1440+(360-index*slice-slice/2);
 
-    document.getElementById("result").innerHTML =
-      "🎉 आपका ऑफर: " + offers[index];
+document.getElementById("wheel").style.transform=
+"rotate("+rotation+"deg)";
 
-    spinning = false;
+setTimeout(()=>{
 
-  },4100);
+selectedOffer=offers[index];
+
+document.getElementById("result").innerText=
+"🎉 आपका Lucky Offer: "+selectedOffer;
+
+document.getElementById("whatsapp").style.display="block";
+
+spinning=false;
+
+},4100);
+
 }
 
 
-function sendBooking(event){
+function sendResult(){
 
-  event.preventDefault();
+const d=getData();
 
-  let name =
-    document.getElementById("name").value;
+const name=document.getElementById("spinName").value;
+const phone=document.getElementById("spinPhone").value;
 
-  let phone =
-    document.getElementById("phone").value;
+const message=
+"🎡 *HARSHITA TOUR & TRAVELS - LUCKY SPIN RESULT*%0A%0A"+
+"👤 नाम: "+name+"%0A"+
+"📱 मोबाइल: "+phone+"%0A"+
+"🆔 Booking ID: "+(d.id||"")+"%0A"+
+"🎁 Lucky Offer: "+selectedOffer;
 
-  let date =
-    document.getElementById("date").value;
+window.open(
+"https://wa.me/917970041341?text="+message,
+"_blank"
+);
 
-  let time =
-    document.getElementById("time").value;
-
-  let from =
-    document.getElementById("from").value;
-
-  let to =
-    document.getElementById("to").value;
-
-  let passengers =
-    document.getElementById("passengers").value;
-
-  let note =
-    document.getElementById("note").value;
-
-  let offer =
-    document.getElementById("result").innerText ||
-    "कोई Spin ऑफर नहीं";
-
-  let message =
-    "🚗 *हर्षिता टूर एंड ट्रेवल्स - नई बुकिंग*%0A%0A" +
-
-    "👤 नाम: " + name + "%0A" +
-    "📱 मोबाइल: " + phone + "%0A" +
-    "📅 तारीख: " + date + "%0A" +
-    "⏰ समय: " + time + "%0A" +
-    "📍 कहाँ से: " + from + "%0A" +
-    "🏁 कहाँ जाना है: " + to + "%0A" +
-    "👥 यात्री: " + passengers + "%0A" +
-    "🎁 ऑफर: " + offer + "%0A" +
-    "📝 जानकारी: " + note;
-
-  window.open(
-    "https://wa.me/917970041341?text=" + message,
-    "_blank"
-  );
 }
+
+
+showBooking();
 
 </script>
 
 </body>
-  </html>
+</html>
