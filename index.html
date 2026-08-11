@@ -6,107 +6,122 @@
 <title>Harshita Tour & Travels</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
   margin:0;
-  padding:20px 12px;
+  padding:15px;
   background:#f2f5f9;
   font-family:Arial,sans-serif;
   color:#172033;
 }
 
 .card{
-  max-width:520px;
+  max-width:550px;
   margin:auto;
   background:white;
+  padding:18px;
   border-radius:18px;
-  padding:20px;
-  box-shadow:0 5px 20px rgba(0,0,0,.12);
+  box-shadow:0 4px 18px #0002;
 }
 
 .header{
-  text-align:center;
   background:linear-gradient(135deg,#0757d9,#00a6ff);
   color:white;
+  text-align:center;
   padding:20px 10px;
   border-radius:14px;
-  margin-bottom:18px;
 }
 
 .header h1{
   margin:0;
-  font-size:25px;
+  font-size:24px;
 }
 
 .header p{
   margin:8px 0 0;
-  font-size:15px;
 }
 
-.title{
-  text-align:center;
-  font-size:22px;
+.form{
+  margin-top:18px;
+}
+
+label{
+  display:block;
   font-weight:bold;
+  margin-top:12px;
+}
+
+input{
+  width:100%;
+  padding:12px;
+  margin-top:5px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:16px;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  margin-top:20px;
+  border:0;
+  border-radius:10px;
+  background:#0757d9;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+}
+
+.booking{
+  display:none;
+  margin-top:25px;
+  padding:18px;
+  border:2px solid #0757d9;
+  border-radius:14px;
+  background:#fff;
+}
+
+.booking h2{
+  text-align:center;
   color:#0757d9;
-  margin:15px 0;
 }
 
 .line{
   border-top:2px solid #0757d9;
-  margin:10px 0 18px;
+  margin:12px 0 18px;
 }
 
 .info{
-  font-size:16px;
   line-height:1.8;
-}
-
-.info strong{
-  color:#111827;
+  font-size:16px;
 }
 
 .status{
-  margin-top:15px;
-  padding:12px;
   background:#fff3cd;
-  border-radius:10px;
+  padding:12px;
+  border-radius:8px;
   text-align:center;
   font-weight:bold;
-  color:#856404;
+  margin-top:15px;
 }
 
 .offer{
-  margin-top:20px;
-  padding:18px;
+  margin-top:18px;
+  padding:15px;
   background:#eef7ff;
-  border-radius:14px;
+  border-radius:10px;
   text-align:center;
-}
-
-.offer h2{
-  margin-top:0;
-  color:#0757d9;
 }
 
 .offer a{
   display:inline-block;
-  margin-top:10px;
-  padding:12px 18px;
   background:#0757d9;
   color:white;
-  text-decoration:none;
+  padding:11px 16px;
   border-radius:8px;
+  text-decoration:none;
   font-weight:bold;
-}
-
-.note{
-  margin-top:15px;
-  font-size:14px;
-  text-align:center;
-  color:#555;
 }
 </style>
 </head>
@@ -115,78 +130,170 @@ body{
 
 <div class="card">
 
-  <div class="header">
-    <h1>🚍 HARSHITA TOUR & TRAVELS 🚍</h1>
-    <p>आरामदायक यात्रा • आसान बुकिंग • शानदार ऑफर</p>
-  </div>
+<div class="header">
+<h1>🚍 HARSHITA TOUR & TRAVELS 🚍</h1>
+<p>आरामदायक यात्रा • आसान बुकिंग • शानदार ऑफर</p>
+</div>
 
-  <div class="title">
-    🎫 BOOKING CONFIRMATION
-  </div>
+<div class="form">
 
-  <div class="line"></div>
+<label>👤 Passenger Name</label>
+<input id="passenger" placeholder="जैसे: अंतर सिंह व 7 अन्य यात्री">
 
-  <div class="info">
+<label>🆔 Booking ID</label>
+<input id="bookingid" placeholder="जैसे: HTT-2026-001">
 
-    <p>नमस्कार <strong>अंतर सिंह जी</strong> 🙏</p>
+<label>📅 Journey Date</label>
+<input id="date" placeholder="जैसे: 12/08/2026">
 
-    <p>आपकी यात्रा की Booking <strong>CONFIRMED ✅</strong> है।</p>
+<label>📍 Destination</label>
+<input id="destination" placeholder="जैसे: उज्जैन मेलनी माताजी">
 
-    <p>🆔 <strong>Booking ID:</strong> HTT-2026-001</p>
+<label>📍 Pickup Location</label>
+<input id="pickup" placeholder="जैसे: खजुरी चंद्रावत">
 
-    <p>👤 <strong>Passenger Name:</strong> अंतर सिंह व 7 अन्य यात्री</p>
+<label>⏰ Reporting Time</label>
+<input id="time" placeholder="जैसे: सुबह 8 बजे">
 
-    <p>📅 <strong>Journey Date:</strong> 12/08/2026</p>
+<label>🚍 Vehicle</label>
+<input id="vehicle" placeholder="जैसे: Eeco CAR">
 
-    <p>📍 <strong>Destination:</strong> उज्जैन मेलनी माताजी</p>
+<label>👨‍✈️ Driver Name</label>
+<input id="driver" placeholder="ड्राइवर का नाम">
 
-    <p>📍 <strong>Pickup Location:</strong> खजुरी चंद्रावत</p>
+<label>📞 Driver Mobile</label>
+<input id="mobile" placeholder="मोबाइल नंबर">
 
-    <p>⏰ <strong>Reporting Time:</strong> सुबह 8 बजे</p>
+<label>💰 Total Fare</label>
+<input id="fare" placeholder="जैसे: 3000">
 
-    <p>🚍 <strong>Vehicle:</strong> Eeco CAR</p>
+<label>💵 Advance Paid</label>
+<input id="advance" placeholder="जैसे: 00">
 
-    <p>👨‍✈️ <strong>Driver Name:</strong> मंगल सिंह राजपूत</p>
+<label>💳 Balance</label>
+<input id="balance" placeholder="जैसे: 3000">
 
-    <p>📞 <strong>Driver Mobile:</strong> 7970041341, 9691043194</p>
-
-    <p>💰 <strong>Total Fare:</strong> ₹ 3000</p>
-
-    <p>💵 <strong>Advance Paid:</strong> ₹ 00</p>
-
-    <p>💳 <strong>Balance:</strong> ₹ 3000</p>
-
-  </div>
-
-  <div class="status">
-    🟢 Payment Status: [PENDING]
-  </div>
-
-  <div class="offer">
-
-    <h2>🎡 LUCKY SPIN OFFER 🎁</h2>
-
-    <p>
-      बधाई हो आपको लक्की स्पिन मिला है।
-      कृपया नीचे दिए गए लिंक पर क्लिक करें और
-      अपना नाम व नंबर डालकर स्पिन करें।
-    </p>
-
-    <a href="https://harshitatourandtravels-dot.github.io/Harshitatourand-travels/">
-      🎡 SPIN NOW
-    </a>
-
-    <p>
-      स्पिन के बाद अपना रिजल्ट हमें भेजें।
-    </p>
-
-  </div>
-
-  <div class="note">
-    🚍 Harshita Tour & Travels
-  </div>
+<button onclick="generateBooking()">🎫 Booking तैयार करें</button>
 
 </div>
+
+<div class="booking" id="booking">
+
+<h2>🎫 BOOKING CONFIRMATION</h2>
+
+<div class="line"></div>
+
+<div class="info">
+
+<p>नमस्कार <strong id="outPassenger"></strong> जी 🙏</p>
+
+<p>आपकी यात्रा की Booking <strong>CONFIRMED ✅</strong> है।</p>
+
+<p>🆔 <strong>Booking ID:</strong> <span id="outBooking"></span></p>
+
+<p>👤 <strong>Passenger Name:</strong> <span id="outPassenger2"></span></p>
+
+<p>📅 <strong>Journey Date:</strong> <span id="outDate"></span></p>
+
+<p>📍 <strong>Destination:</strong> <span id="outDestination"></span></p>
+
+<p>📍 <strong>Pickup Location:</strong> <span id="outPickup"></span></p>
+
+<p>⏰ <strong>Reporting Time:</strong> <span id="outTime"></span></p>
+
+<p>🚍 <strong>Vehicle:</strong> <span id="outVehicle"></span></p>
+
+<p>👨‍✈️ <strong>Driver Name:</strong> <span id="outDriver"></span></p>
+
+<p>📞 <strong>Driver Mobile:</strong> <span id="outMobile"></span></p>
+
+<p>💰 <strong>Total Fare:</strong> ₹ <span id="outFare"></span></p>
+
+<p>💵 <strong>Advance Paid:</strong> ₹ <span id="outAdvance"></span></p>
+
+<p>💳 <strong>Balance:</strong> ₹ <span id="outBalance"></span></p>
+
+</div>
+
+<div class="status">
+🟢 Payment Status: [PENDING]
+</div>
+
+<div class="offer">
+
+<h2>🎡 LUCKY SPIN OFFER 🎁</h2>
+
+<p>
+बधाई हो आपको लक्की स्पिन मिला है।
+कृपया नीचे दिए गए लिंक पर क्लिक करें और
+अपना नाम व नंबर डालकर स्पिन करें।
+</p>
+
+<a href="https://harshitatourandtravels-dot.github.io/Harshitatourand-travels/">
+🎡 SPIN NOW
+</a>
+
+<p>स्पिन के बाद अपना रिजल्ट हमें भेजें।</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function generateBooking(){
+
+document.getElementById("outPassenger").innerText =
+document.getElementById("passenger").value;
+
+document.getElementById("outPassenger2").innerText =
+document.getElementById("passenger").value;
+
+document.getElementById("outBooking").innerText =
+document.getElementById("bookingid").value;
+
+document.getElementById("outDate").innerText =
+document.getElementById("date").value;
+
+document.getElementById("outDestination").innerText =
+document.getElementById("destination").value;
+
+document.getElementById("outPickup").innerText =
+document.getElementById("pickup").value;
+
+document.getElementById("outTime").innerText =
+document.getElementById("time").value;
+
+document.getElementById("outVehicle").innerText =
+document.getElementById("vehicle").value;
+
+document.getElementById("outDriver").innerText =
+document.getElementById("driver").value;
+
+document.getElementById("outMobile").innerText =
+document.getElementById("mobile").value;
+
+document.getElementById("outFare").innerText =
+document.getElementById("fare").value;
+
+document.getElementById("outAdvance").innerText =
+document.getElementById("advance").value;
+
+document.getElementById("outBalance").innerText =
+document.getElementById("balance").value;
+
+document.getElementById("booking").style.display="block";
+
+window.scrollTo({
+top:document.getElementById("booking").offsetTop,
+behavior:"smooth"
+});
+
+}
+
+</script>
 
 </body>
 </html>
